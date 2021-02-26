@@ -1,4 +1,4 @@
-# homebrew-brew
+# clojure-lsp on brew
 
 ## How to use this tap
 
