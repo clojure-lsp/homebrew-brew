@@ -8,6 +8,5 @@
 brew remove clojure-lsp
 
 # Then, use this tap
-brew tap clojure-lsp/homebrew-brew
-brew install clojure-lsp-native
+brew install clojure-lsp/brew/clojure-lsp-native
 ```
