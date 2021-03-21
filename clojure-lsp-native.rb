@@ -2,9 +2,9 @@ class ClojureLspNative < Formula
 
   desc "Language Server (LSP) for Clojure"
   homepage "https://github.com/clojure-lsp/clojure-lsp"
-  version "2021.03.16-20.28.06"
-  url "https://github.com/clojure-lsp/clojure-lsp/releases/download/2021.03.16-20.28.06/clojure-lsp-native-macos-amd64.zip"
-  sha256 "b7e3eec7114b59efae8e9bf4150519af80a79f3f959c4c2420322f44dbcf3262"
+  version "2021.03.21-23.29.19"
+  url "https://github.com/clojure-lsp/clojure-lsp/releases/download/2021.03.21-23.29.19/clojure-lsp-native-macos-amd64.zip"
+  sha256 "e09422382e4f8f51bf3efbebc16d8264adb7b6d0b90e913eeb47a99aa4bcd6b5"
 
   bottle :unneeded
 
