@@ -2,7 +2,6 @@ class ClojureLspNative < Formula
   desc "Language Server (LSP) for Clojure"
   homepage "https://github.com/clojure-lsp/clojure-lsp"
   version "2021.10.20-13.04.11"
-  bottle :unneeded
 
   if OS.mac?
     url "https://github.com/clojure-lsp/clojure-lsp/releases/download/2021.10.20-13.04.11/clojure-lsp-native-macos-amd64.zip"
