@@ -1,14 +1,14 @@
 class ClojureLspNative < Formula
   desc "Language Server (LSP) for Clojure"
   homepage "https://github.com/clojure-lsp/clojure-lsp"
-  version "2022.02.01-16.53.14"
+  version "2022.02.01-20.02.32"
 
   if OS.mac?
-    url "https://github.com/clojure-lsp/clojure-lsp/releases/download/2022.02.01-16.53.14/clojure-lsp-native-macos-amd64.zip"
-    sha256 "491cffc1d0345a149177850682225338771a54bc0e38b7fabc1da93367010bc1"
+    url "https://github.com/clojure-lsp/clojure-lsp/releases/download/2022.02.01-20.02.32/clojure-lsp-native-macos-amd64.zip"
+    sha256 "f39a0daf243f689b165ec4910ea272706d12316b64a115d9d589b7a09ea92a9f"
   elsif OS.linux?
-    url "https://github.com/clojure-lsp/clojure-lsp/releases/download/2022.02.01-16.53.14/clojure-lsp-native-linux-amd64.zip"
-    sha256 "13efdd7a9122b81b506d0807f96c28543b1b67e608fd5e02d9099c8d1c3a0df4"
+    url "https://github.com/clojure-lsp/clojure-lsp/releases/download/2022.02.01-20.02.32/clojure-lsp-native-linux-amd64.zip"
+    sha256 "85a11f5b94f20de12630cc310824e613694734c063837fefe941cf4ab90224ed"
   end
 
   def install
