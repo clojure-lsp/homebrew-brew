@@ -4,8 +4,13 @@ class ClojureLspNative < Formula
   version "<version>"
 
   if OS.mac?
-    url "https://github.com/clojure-lsp/clojure-lsp/releases/download/<version>/clojure-lsp-native-macos-amd64.zip"
-    sha256 "<mac-sha>"
+    if Hardware::CPU.arm?
+      url "https://github.com/clojure-lsp/clojure-lsp/releases/download/<version>/clojure-lsp-native-macos-aarch64.zip"
+      sha256 "<mac-arm-sha>"
+    else
+      url "https://github.com/clojure-lsp/clojure-lsp/releases/download/<version>/clojure-lsp-native-macos-amd64.zip"
+      sha256 "<mac-amd-sha>"
+    end
   elsif OS.linux?
     url "https://github.com/clojure-lsp/clojure-lsp/releases/download/<version>/clojure-lsp-native-linux-amd64.zip"
     sha256 "<linux-sha>"
