@@ -1,12 +1,15 @@
 #!/usr/bin/env bb
 
-(require '[clojure.tools.cli :refer [parse-opts]]
-         '[clojure.string :as str])
+(require '[clojure.string :as str]
+         '[clojure.tools.cli :refer [parse-opts]])
 
 (def cli-options
-  [[nil "--mac-sha SHA" "The sha256 of the mac artifact"
+  [[nil "--mac-arm-sha SHA" "The sha256 of the mac aarch64 artifact"
     :default ""
-    :missing "--mac-sha must be specified"]
+    :missing "--mac-arm-sha must be specified"]
+   [nil "--mac-amd-sha SHA" "The sha256 of the mac amd64 artifact"
+    :default ""
+    :missing "--mac-amd-sha must be specified"]
    [nil "--linux-sha SHA" "The sha256 of the linux artifact"
     :default ""
     :missing "--linux-sha must be specified"]
@@ -18,11 +21,12 @@
 
 
 (defn render
-  [{:keys [version linux-sha mac-sha template]}]
+  [{:keys [version linux-sha mac-amd-sha mac-arm-sha template]}]
   (-> (slurp template)
       (str/replace #"<version>" version)
       (str/replace #"<linux-sha>" linux-sha)
-      (str/replace #"<mac-sha>" mac-sha)))
+      (str/replace #"<mac-arm-sha>" mac-arm-sha)
+      (str/replace #"<mac-amd-sha>" mac-amd-sha)))
 
 (-> (parse-opts *command-line-args* cli-options)
     :options
