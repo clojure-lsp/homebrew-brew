@@ -9,6 +9,10 @@ brew remove clojure-lsp
 
 # Then, use this tap
 brew install clojure-lsp/brew/clojure-lsp-native
+
+# for static linux
+
+brew install clojure-lsp/brew/clojure-lsp-native --with-static
 ```
 
 ## development
