@@ -10,3 +10,7 @@ brew remove clojure-lsp
 # Then, use this tap
 brew install clojure-lsp/brew/clojure-lsp-native
 ```
+
+## development
+
+To update the formulas run `bb -o render.clj --version "<new-version>" --mac-arm-sha "<sha>" --mac-amd-sha "<sha>" --linux-sha "<sha>" --static-linux-sha "<static-linux-sha>" > clojure-lsp-native.rb` 
