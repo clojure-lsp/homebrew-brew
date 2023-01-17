@@ -10,9 +10,9 @@ brew remove clojure-lsp
 # Then, use this tap
 brew install clojure-lsp/brew/clojure-lsp-native
 
-# for static linux
+# For linux, by default it will install the static binary, you can install the dynamic one with:
 
-brew install clojure-lsp/brew/clojure-lsp-native --with-static
+brew install clojure-lsp/brew/clojure-lsp-native --with-dynamic
 ```
 
 ## development
