@@ -1,25 +1,25 @@
 class ClojureLspNative < Formula
   desc "Language Server (LSP) for Clojure"
   homepage "https://github.com/clojure-lsp/clojure-lsp"
-  version "2022.12.09-15.51.10"
+  version "2023.01.26-11.08.16"
 
   option "with-dynamic", "Installs the not static binary."
 
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/clojure-lsp/clojure-lsp/releases/download/2022.12.09-15.51.10/clojure-lsp-native-macos-aarch64.zip"
-      sha256 "200bea5ece7a62ddda8c0b6c43d40be00c7363e532a92338a633877651e83120"
+      url "https://github.com/clojure-lsp/clojure-lsp/releases/download/2023.01.26-11.08.16/clojure-lsp-native-macos-aarch64.zip"
+      sha256 ""
     else
-      url "https://github.com/clojure-lsp/clojure-lsp/releases/download/2022.12.09-15.51.10/clojure-lsp-native-macos-amd64.zip"
-      sha256 "23b9c40ee223b31b6af726fd8c9838a5db10310cdd073d2dc465c8d681916721"
+      url "https://github.com/clojure-lsp/clojure-lsp/releases/download/2023.01.26-11.08.16/clojure-lsp-native-macos-amd64.zip"
+      sha256 "c9883ca091045968ba3253f48fe5164a9625e2ced257f86a2ed0246c2c385a0a"
     end
   elsif OS.linux?
     if build.with? "dynamic"
-      url "https://github.com/clojure-lsp/clojure-lsp/releases/download/2022.12.09-15.51.10/clojure-lsp-native-linux-amd64.zip"
-      sha256 "2b26b4009bc40dcdca124a22ff76d96d76facfb8b8c9f1ba26fe94dab96c02e0"
+      url "https://github.com/clojure-lsp/clojure-lsp/releases/download/2023.01.26-11.08.16/clojure-lsp-native-linux-amd64.zip"
+      sha256 "e1b5feea50033d84ae1de47b50a8abb5466268161120b1964188a71b41aea23e"
     else
-      url "https://github.com/clojure-lsp/clojure-lsp/releases/download/2022.12.09-15.51.10/clojure-lsp-native-static-linux-amd64.zip"
-      sha256 "4f77e05ac178108d219eb3197af412f116982b96cd402f4b960f57a5cb5c0dd0"
+      url "https://github.com/clojure-lsp/clojure-lsp/releases/download/2023.01.26-11.08.16/clojure-lsp-native-static-linux-amd64.zip"
+      sha256 ""
     end
   end
 
