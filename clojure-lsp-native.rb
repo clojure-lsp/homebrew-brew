@@ -8,7 +8,7 @@ class ClojureLspNative < Formula
   if OS.mac?
     if Hardware::CPU.arm?
       url "https://github.com/clojure-lsp/clojure-lsp/releases/download/2024.03.13-13.11.00/clojure-lsp-native-macos-aarch64.zip"
-      sha256 ""
+      sha256 "bc7f32c1c3484399863726b6b58b8ed426e3a8498497256c25110f5b34eab1c2"
     else
       url "https://github.com/clojure-lsp/clojure-lsp/releases/download/2024.03.13-13.11.00/clojure-lsp-native-macos-amd64.zip"
       sha256 "87103a99b85a1868725edb0b0e95de89754b7f37492f333a79eecc1e1aa1cbc8"
