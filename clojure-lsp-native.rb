@@ -1,25 +1,25 @@
 class ClojureLspNative < Formula
   desc "Language Server (LSP) for Clojure"
   homepage "https://github.com/clojure-lsp/clojure-lsp"
-  version "2024.04.22-11.50.26"
+  version "2024.08.03-15.28.27"
 
   option "with-dynamic", "Installs the not static binary."
 
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/clojure-lsp/clojure-lsp/releases/download/2024.04.22-11.50.26/clojure-lsp-native-macos-aarch64.zip"
-      sha256 "5fb902ff30e7f87626b5c6ae376ec9f278898abb01e12096923066471787641d"
+      url "https://github.com/clojure-lsp/clojure-lsp/releases/download/2024.08.03-15.28.27/clojure-lsp-native-macos-aarch64.zip"
+      sha256 ""
     else
-      url "https://github.com/clojure-lsp/clojure-lsp/releases/download/2024.04.22-11.50.26/clojure-lsp-native-macos-amd64.zip"
-      sha256 "bed83cbbc902cfd554a467da13acc37e4ec963827b212d45d0c8a05187d4191d"
+      url "https://github.com/clojure-lsp/clojure-lsp/releases/download/2024.08.03-15.28.27/clojure-lsp-native-macos-amd64.zip"
+      sha256 "fc9734132bdc1cc54af9d7272ce0468a9fd2340f09f75d77ca54b2050b8b3d67"
     end
   elsif OS.linux?
     if build.with? "dynamic"
-      url "https://github.com/clojure-lsp/clojure-lsp/releases/download/2024.04.22-11.50.26/clojure-lsp-native-linux-amd64.zip"
-      sha256 "ab2b5fe794649909dae8d450c6d677b79a9d9af25da7aa4841e73f5de5aea945"
+      url "https://github.com/clojure-lsp/clojure-lsp/releases/download/2024.08.03-15.28.27/clojure-lsp-native-linux-amd64.zip"
+      sha256 "66d0ee8f3f6995df77ecc162e5715427fee00303b4c8b08d4d39cc667e8846e9"
     else
-      url "https://github.com/clojure-lsp/clojure-lsp/releases/download/2024.04.22-11.50.26/clojure-lsp-native-static-linux-amd64.zip"
-      sha256 "a93368b16d33ebe10eab1917ba7a4eae48e676b10ffa9e452922c7c252dc2c7f"
+      url "https://github.com/clojure-lsp/clojure-lsp/releases/download/2024.08.03-15.28.27/clojure-lsp-native-static-linux-amd64.zip"
+      sha256 "0611e88bb7a0cabfef2f99453434bcf90538161dde8d97e2273e53ea4c859017"
     end
   end
 
