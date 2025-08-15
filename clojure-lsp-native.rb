@@ -1,25 +1,25 @@
 class ClojureLspNative < Formula
   desc "Language Server (LSP) for Clojure"
   homepage "https://github.com/clojure-lsp/clojure-lsp"
-  version "2025.06.13-20.45.44"
+  version "2025.08.15-15.37.37"
 
   option "with-dynamic", "Installs the not static binary."
 
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/clojure-lsp/clojure-lsp/releases/download/2025.06.13-20.45.44/clojure-lsp-native-macos-aarch64.zip"
-      sha256 "6c26142191cc1c98118eb5207fb92277f8b3023530a28a8ba6d5c46aba767a36"
+      url "https://github.com/clojure-lsp/clojure-lsp/releases/download/2025.08.15-15.37.37/clojure-lsp-native-macos-aarch64.zip"
+      sha256 "8c61a213eb44c066f1d1a7c44ae01d01d8746eeec4cbe018a62c9fbe75823c26"
     else
-      url "https://github.com/clojure-lsp/clojure-lsp/releases/download/2025.06.13-20.45.44/clojure-lsp-native-macos-amd64.zip"
-      sha256 "4056a925abe03e60691ea311df3492eeb74ed5867a687f4c8ef33083f9192a32"
+      url "https://github.com/clojure-lsp/clojure-lsp/releases/download/2025.08.15-15.37.37/clojure-lsp-native-macos-amd64.zip"
+      sha256 "fa70b52afb967891fce32bb6eaf4e4de5657e46eec0086f58f2cfe23d80ac3e9"
     end
   elsif OS.linux?
     if build.with? "dynamic"
-      url "https://github.com/clojure-lsp/clojure-lsp/releases/download/2025.06.13-20.45.44/clojure-lsp-native-linux-amd64.zip"
-      sha256 "0da5ccdffbc392f289221eea9a1b220daeb165d46f915d4d39172ebf0aa14430"
+      url "https://github.com/clojure-lsp/clojure-lsp/releases/download/2025.08.15-15.37.37/clojure-lsp-native-linux-amd64.zip"
+      sha256 "bd505cd3d469937dcfca7ce11f5e329bfb4081bff07a0bd1dd6f05e3c8db5633"
     else
-      url "https://github.com/clojure-lsp/clojure-lsp/releases/download/2025.06.13-20.45.44/clojure-lsp-native-static-linux-amd64.zip"
-      sha256 "b719fdd8a3b9a4e6ded6b61ddcc58ac405ddb4075d72e08f950326f24d4fe143"
+      url "https://github.com/clojure-lsp/clojure-lsp/releases/download/2025.08.15-15.37.37/clojure-lsp-native-static-linux-amd64.zip"
+      sha256 "87ab1c370363b25759d16e9cd51a8184ba2488db2a2eb080687492dbedae4b14"
     end
   end
 
