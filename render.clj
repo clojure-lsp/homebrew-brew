@@ -13,6 +13,9 @@
    [nil "--linux-sha SHA" "The sha256 of the linux artifact"
     :default ""
     :missing "--linux-sha must be specified"]
+[nil "--linux-sha-arm SHA" "The sha256 of the linux arm artifact"
+    :default ""
+    :missing "--linux-sha-arm must be specified"]   
    [nil "--static-linux-sha SHA" "The sha256 of the static linux artifact"
     :default ""
     :missing "--static-linux-sha must be specified"]
@@ -27,6 +30,7 @@
   [{:keys [version linux-sha static-linux-sha mac-amd-sha mac-arm-sha template]}]
   (-> (slurp template)
       (str/replace #"<version>" version)
+      (str/replace #"<linux-sha-arm>" linux-sha-arm)
       (str/replace #"<linux-sha>" linux-sha)
       (str/replace #"<static-linux-sha>" static-linux-sha)
       (str/replace #"<mac-arm-sha>" mac-arm-sha)
