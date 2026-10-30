@@ -27,7 +27,7 @@
 
 
 (defn render
-  [{:keys [version linux-sha static-linux-sha mac-amd-sha mac-arm-sha template]}]
+  [{:keys [version linux-sha linux-sha-arm static-linux-sha mac-amd-sha mac-arm-sha template]}]
   (-> (slurp template)
       (str/replace #"<version>" version)
       (str/replace #"<linux-sha-arm>" linux-sha-arm)
