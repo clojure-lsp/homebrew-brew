@@ -15,7 +15,7 @@ class ClojureLspNative < Formula
     end
   elsif OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/clojure-lsp/clojure-lsp/releases/download/<version>/clojure-lsp-native-linux-amd64.zip"
+      url "https://github.com/clojure-lsp/clojure-lsp/releases/download/<version>/clojure-lsp-native-linux-aarch64.zip"
       sha256 "<linux-sha-arm>"
     else
       if build.with? "dynamic"
