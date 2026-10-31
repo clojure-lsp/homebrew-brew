@@ -14,12 +14,17 @@ class ClojureLspNative < Formula
       sha256 "<mac-amd-sha>"
     end
   elsif OS.linux?
-    if build.with? "dynamic"
-      url "https://github.com/clojure-lsp/clojure-lsp/releases/download/<version>/clojure-lsp-native-linux-amd64.zip"
-      sha256 "<linux-sha>"
+    if Hardware::CPU.arm?
+      url "https://github.com/clojure-lsp/clojure-lsp/releases/download/<version>/clojure-lsp-native-linux-aarch64.zip"
+      sha256 "<linux-sha-arm>"
     else
-      url "https://github.com/clojure-lsp/clojure-lsp/releases/download/<version>/clojure-lsp-native-static-linux-amd64.zip"
-      sha256 "<static-linux-sha>"
+      if build.with? "dynamic"
+        url "https://github.com/clojure-lsp/clojure-lsp/releases/download/<version>/clojure-lsp-native-linux-amd64.zip"
+        sha256 "<linux-sha-amd64>"
+      else
+        url "https://github.com/clojure-lsp/clojure-lsp/releases/download/<version>/clojure-lsp-native-static-linux-amd64.zip"
+        sha256 "<static-linux-sha-amd64>"
+      end
     end
   end
 
